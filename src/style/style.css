@@ -1,0 +1,46 @@
+:root {
+    --container-width: 33.3vw;
+}
+
+#app { padding: 20px; font-family: sans-serif; }
+h1, h3 { margin: 0; }
+form { margin-top: 20px; }
+input { font-size: 20px; padding: 2px 4px; }
+ul { padding: 0; margin: 20px 0; list-style: none outside; }
+li { padding: 4px 8px; line-height: 20px; }
+span.toggle { font-weight: bold; color: #BBB; cursor: pointer; text-align: center; display: inline-block; width: 20px; height: 20px; margin-right: 6px; }
+span.toggle:hover { color: black; }
+a { color: #aaa; }
+a:hover { color: #999; }
+a.remove { margin-left: 10px; font-size: 12px; }
+a.remove:hover { color: #BB0000; }
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+}
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 60px;
+    line-height: 60px; /* Vertically center the text there */
+    background-color: #f5f5f5;
+}
+button.undo {
+    background-image: url('../img/undo.png');
+    background-size: 15px 15px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 20px;
+    height: 20px;
+}
+.half {
+    width: var(--container-width);
+    height: 50vh;
+    float: left;
+}
