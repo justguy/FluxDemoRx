@@ -22,7 +22,7 @@ const TodoActions = function(dispatcher) {
         },
 
         updateTodo: function( id, todo ) {
-            let update = $.extend( {}, todo, { id: id } );
+            let update = Object.assign({}, todo, { id: id });
             dispatcher.dispatch( { type: 'UPDATE_TODO', todo: update } )
         },
 

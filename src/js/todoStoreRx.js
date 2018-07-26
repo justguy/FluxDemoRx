@@ -46,7 +46,7 @@ let TodoStore = function(dispatcher) {
                 break;
             case ACTION_TYPES.UPDATE_TODO:
                 todos = _todos.getValue();
-                $.extend(todos[payload.todo.id], payload.todo);
+                Object.assign(todos[payload.todo.id], payload.todo);
                 _todos.next(todos);
                 executeActionObservers(ACTION_TYPES.UPDATE_TODO, getTodos());
                 break;

@@ -19,6 +19,10 @@ class MyBehaviorSubject {
         this.history = [];
     }
 
+    /**
+     * Add a new subscriber
+     * @param observer
+     */
     subscribe(observer) {
         this.observers.push(observer);
         observer(this.lastValue);
@@ -61,8 +65,9 @@ class MyBehaviorSubject {
      */
     asObservable() {
         let observable = MyObservable(this.observers);
-        observable.next(this.lastValue);
-        return observable();
+        delete observable.next;
+
+        return observable;
     }
 }
 
